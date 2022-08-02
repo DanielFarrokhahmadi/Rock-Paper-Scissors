@@ -57,35 +57,4 @@ function playRound() {
 
 }
 
-function playGame() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (i = 0; i < 5; i++){
-        roundResult = playRound()
-        if (roundResult.includes("win") === true) {
-            playerScore += 1;
-        }
-
-        else if (roundResult.includes("lose") === true) {
-            computerScore += 1;
-        }
-
-        else {
-            continue;
-        }
-    }
-
-
-    console.log(`Your score = ${playerScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-    
-    if (playerScore > computerScore) {
-        console.log("You win!");
-    }
-
-    else {
-        console.log("You lose!");
-    }
-}
-
-playGame()
+playRound()
