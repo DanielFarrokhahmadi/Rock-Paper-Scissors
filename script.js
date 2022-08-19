@@ -1,18 +1,18 @@
+const div = document.querySelector('.results-container');
 const rps = ["rock", "paper", "scissors"]
+const rocks = document.querySelectorAll('.player > .rock');
+const papers = document.querySelectorAll('.player > .paper');
+const scissors = document.querySelectorAll('.player > .scissors');
 
-function GetPlayerChoice() {
-    return prompt("whats your choice between rock, paper & scissors?");
-}
-
-function sanitizePlayerChoice() {
-    playerSelection = GetPlayerChoice().toLowerCase();
-    if (rps.includes(playerSelection) === true) {
-        return playerSelection;
-    }
-    else {
-        alert("invalid Input!");
-    }
-}
+rocks.forEach(rock => rock.addEventListener('click', function() {
+    playRound("rock");
+}))
+papers.forEach(paper => paper.addEventListener('click', function() {
+    playRound("paper");
+}))
+scissors.forEach(scissors => scissors.addEventListener('click', function() {
+    playRound("scissors");
+}))
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -24,37 +24,35 @@ function getComputerChoice() {
     return rps[getRandomInt(0, 3)];
 }
 
-function playRound() {
+function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
-    let playerSelectionSanitized = sanitizePlayerChoice();
-    if (playerSelectionSanitized === "rock" && computerSelection === "rock" || playerSelectionSanitized === "paper" && computerSelection === "paper" || playerSelectionSanitized === "scissors" && computerSelection === "scissors") {
-        return "It's a draw!";
+
+    if (playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors") {
+        div.textContent = "It's a draw!";
     }
 
-    else if (playerSelectionSanitized === "rock" && computerSelection === "paper") {
-        return "You lose! Paper covers rock";
+    else if (playerSelection === "rock" && computerSelection === "paper") {
+        div.textContent = "You lose! Paper covers rock";
     }
 
-    else if (playerSelectionSanitized === "rock" && computerSelection === "scissors") {
-        return "You win! Rock crushes paper";
+    else if (playerSelection === "rock" && computerSelection === "scissors") {
+        div.textContent = "You win! Rock crushes paper";
     }
 
-    else if (playerSelectionSanitized === "paper" && computerSelection === "rock") {
-        return "You win! Paper covers rock";
+    else if (playerSelection === "paper" && computerSelection === "rock") {
+        div.textContent = "You win! Paper covers rock";
     }
 
-    else if (playerSelectionSanitized === "paper" && computerSelection === "scissors") {
-        return "You lose! Scissors cut paper";
+    else if (playerSelection === "paper" && computerSelection === "scissors") {
+        div.textContent = "You lose! Scissors cut paper";
     }
 
-    else if (playerSelectionSanitized === "scissors" && computerSelection === "rock") {
-        return "You lose! Rock crushes paper";
+    else if (playerSelection === "scissors" && computerSelection === "rock") {
+        div.textContent = "You lose! Rock crushes scissors";
     }
 
-    else {
-        return "You win! Scissors cut paper";
+    else if (playerSelection === "scissors" && computerSelection === "paper") {
+        div.textContent = "You win! Scissors cut paper";
     }
 
 }
-
-playRound()

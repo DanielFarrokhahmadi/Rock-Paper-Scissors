@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "CabinSketch";
+    src: url(./CabinSketch.ttf);
+}
+
+* {
+    font-family: "CabinSketch";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 2%;
+    background-image: url("./bg.jpg");
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #dc143c;
+    flex: 0 1 20%;
+
+}
+
+
+header img {
+    height: 12%;
+    width: 12%;
+}
+
+.results-container {
+    font-size: 32px;
+    font-weight: bold;
+    min-height: 0.5em;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 10%;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background-image: url("./olp.png");
+    flex: 0 1 34.26%;
+}
+
+.empty-container {
+    flex: 0 1 11.42%;
+}
+
+.game { 
+    display: flex;
+    justify-content: center;
+    flex: 0 1 50%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex: 0 1 11.42%;
+}
+
+.container img {
+    height: 45%;
+    width: 45%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 32px;
+    color: red;
+    flex: 0 1 11.42%;
+}
+
+.player {
+    color: #008080;
+}
+
+.computer {
+    color: #ff5f1f;
+}
+
+.clicked {
+    transform: scale(1.1);
+}

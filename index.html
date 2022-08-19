@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src = "./script.js"></script>
+    <link rel = "stylesheet" href = "./style.css">
+    <script src = "./script.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock! Paper, Scissors</title>
 </head>
 <body>
+    <header>
+        <h3>ROCK! Paper, Scissors</h3>
+        <div class = "results-container"></div>
+    </header>
+
+    <section class = "title">
+        <div class = "title-container player">
+            <h5>YOUR CHOICE</h5>
+        </div>
+        <div class = "empty-container"></div>
+        <div class = "title-container computer">
+            <h5>COMPUTER'S CHOICE</h5>
+        </div>
+    </section>
     
+    <section class = "game">
+        <div class = "container player">
+            <h6 class = "rock">Rock</h6>
+            <img src = "./rock.png" alt = "rock" class = "rock">
+        </div>
+
+        <div class = "container player">
+            <h6 class = "paper">Paper</h6>
+            <img src = "./paper.png" alt = "paper" class = "paper">
+        </div>
+
+        <div class = "container player">
+            <h6 class = "scissors">Scissors</h6>
+            <img src = "./scissors.png" alt = "scissors" class = "scissors">
+        </div>
+        <div class = "text-container">
+            <h5>VS</h5>
+        </div>
+
+        <div class = "container computer">
+            <h6>Rock</h6>
+            <img src = "./rock.png" alt = "rock" class = "rock">
+        </div>
+
+        <div class = "container computer">
+            <h6>Paper</h6>
+            <img src = "./paper.png" alt = "paper" class = "paper">
+        </div>
+
+        <div class = "container computer">
+            <h6>Scissors</h6>
+            <img src = "./scissors.png" alt = "scissors" class = "scissors">
+        </div>
+    </section>
 </body>
 </html>
